@@ -1,9 +1,34 @@
 html,
 body {
+  direction: rtl;
+  font-size: 14px;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: IRANSans !important;
+  text-align: right;
+  line-height: 3;
+}
+
+p {
+  font-size: 14px;
+  line-height: 3;
+  text-align: justify;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: IRANSans;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: IRANSans;
 }
 
 a {

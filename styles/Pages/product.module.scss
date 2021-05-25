@@ -1,0 +1,22 @@
+.Box {
+ 
+    img {
+        width: 100%;
+        height: auto;
+    }
+    h1{
+        font-size: 18px;
+        line-height: 2;
+        padding: 10px;
+
+    }
+}
+.rating{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+}
+.paperTab{
+    padding: 10px;
+}
