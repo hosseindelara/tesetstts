@@ -35,12 +35,12 @@ export async function getServerSideProps({ query }: any) {
     let data: any = []
 
     try {
-       
-           const res = await axios.get(query.name || query.rating?`${baseUrl}/search?name=${query.name}&rating=${query.rating}`:`${baseUrl}/prodouct/`, {
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })        
+
+        const res = await axios.get(query.name || query.rating ? `${baseUrl}/search?name=${encodeURIComponent(query.name)}&rating=${query.rating}` : `${baseUrl}/prodouct/`, {
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            }
+        })
 
         data = await res.data
 

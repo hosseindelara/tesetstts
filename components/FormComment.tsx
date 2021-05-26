@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 
 import { Button, Grid, TextareaAutosize, TextField } from "@material-ui/core";
 import axios from 'axios';
@@ -53,6 +53,12 @@ export const FormComment = ({ id }: PropsCheck): JSX.Element => {
                 draggable: true,
                 progress: undefined,
             });
+            setFormData({
+                name: '',
+                rating: 0,
+                description: '',
+                prodouctid: id
+            })
 
         } catch (error) {
             toast.error(error.response.data.Message, {
@@ -117,7 +123,7 @@ export const FormComment = ({ id }: PropsCheck): JSX.Element => {
         <form method='POST' onSubmit={handelSubmit} className={style.Form} >
             <Grid container >
                 <Grid item xs={12} sm={12} lg={12} >
-                    <TextField name='name' onChange={(e) => handelonCheng('name', e.target.value)} className={style.boxnput} label="نام و نام خانوادگی" variant="outlined" />
+                    <TextField value={formData.name} name='name' onChange={(e) => handelonCheng('name', e.target.value)} className={style.boxnput} label="نام و نام خانوادگی" variant="outlined" />
                 </Grid>
                 <Grid item xs={12} sm={12} lg={12} >
                     <p className={style.para} >امتیاز شما به این محصول</p>
@@ -131,7 +137,7 @@ export const FormComment = ({ id }: PropsCheck): JSX.Element => {
                     />
                 </Grid>
                 <Grid item xs={12} sm={12} lg={12} >
-                    <TextareaAutosize name='description' onChange={(e) => handelonCheng('description', e.target.value)} className={style.Textarea} rowsMin={6} placeholder="نظر شما درباره این محصول" />
+                    <TextareaAutosize value={formData.description} name='description' onChange={(e) => handelonCheng('description', e.target.value)} className={style.Textarea} rowsMin={6} placeholder="نظر شما درباره این محصول" />
                 </Grid>
                 <Grid item xs={12} sm={12} lg={12} >
                     <Button type='submit' variant="contained" color="secondary">ارسال دیدگاه</Button>

@@ -16,7 +16,7 @@ export default function Product({ data }: propsData): JSX.Element {
         <Grid item xs={12} sm={6} md={4} lg={3}  >
 
             {
-                data ? <Link href={`/prodouct/${data.id}`}><a><Paper elevation={3} className={style.root}>
+                data ? <Link href={`/prodouct/${data.id}`}><a><Paper elevation={3} className={style.product}>
                     <h3 className={style.header} >{data.name}</h3>
                     <img src={data.categoryPhoto} width={150} height={150} loading='lazy' className='lazy' alt={data.name} />
                     <Rating value={data.rating} readOnly />

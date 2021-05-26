@@ -22,7 +22,7 @@ export const Search: React.FC<{}> = () => {
                     <InputBase
                         name='name'
                         className={style.input}
-                        placeholder="جستجو درمیان محصولات(انگلیسی)"
+                        placeholder="جستجو درمیان محصولات"
                     />
                     <Select
                         name='rating'
@@ -31,7 +31,7 @@ export const Search: React.FC<{}> = () => {
                         className={style.select}
                     >
                         {
-                            rating.map(item => (<MenuItem value={item}>{`کالاهای ${item} ستاره`}</MenuItem>))
+                            rating.map(item => (<MenuItem key={item.toString()} value={item}>{`کالاهای ${item} ستاره`}</MenuItem>))
                         }
                     </Select>
                     <IconButton type="submit"

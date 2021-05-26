@@ -6,7 +6,7 @@ import { prodouctType } from '../../types/index'
 export default (req: NextApiRequest, res: NextApiResponse<prodouctType[] | { Message: String }>) => {
 
     if (req.method === 'GET') {
-
+        
         if (req.query.name) {
 
             const name: any = req.query.name
@@ -34,7 +34,7 @@ export default (req: NextApiRequest, res: NextApiResponse<prodouctType[] | { Mes
             const rating: any = req.query.rating
 
             const Findrating = prodouctlist.filter(item => item.rating === parseInt(rating))
-           
+
             res.status(200).json(Findrating)
         }
     }

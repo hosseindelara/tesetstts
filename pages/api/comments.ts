@@ -23,7 +23,7 @@ export default (req: NextApiRequest, res: NextApiResponse<{}>) => {
 
                 fs.writeFile('./pages/api/comments.json', JSON.stringify(finaly), 'utf8', () => { })
 
-                res.status(201).json({ Message: 'دیدگاه شما با موفقیت ثبت شد.' })
+                res.status(201).json({ Message: 'دیدگاه شما با موفقیت ثبت شد. بعد از تایید مدیریت منتشر خواهد شد.' })
             }
 
 
